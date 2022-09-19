@@ -36,7 +36,17 @@ class _LocationState extends State<Location> {
     // screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       body: SafeArea(
-        child: buildMap(),
+        child: Column(
+          children: [
+            Container(
+              width: MediaQuery.of(context).size.width,
+              alignment: Alignment.center,
+              color: Color.fromARGB(255, 249, 223, 162),
+              child: Text('LONDON MAP', style: TextStyle(fontSize: 50)),
+            ),
+            buildMap(),
+          ],
+        ),
       ),
     );
   }

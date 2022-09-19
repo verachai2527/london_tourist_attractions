@@ -18,7 +18,19 @@ class _MyNewsFeedState extends State<MyNewsFeed> {
   final NewsAPI _newsAPI = NewsAPI("e723e4bdbe574c8bb27baa45ef0c5673");
   @override
   Widget build(BuildContext context) {
-    return _buildEverythingTabView();
+    return Scaffold(
+        body: SafeArea(
+            child: Column(
+      children: [
+        Container(
+          width: MediaQuery.of(context).size.width,
+          alignment: Alignment.center,
+          color: Color.fromARGB(255, 249, 223, 162),
+          child: Text('LONDON NEWS FEED', style: TextStyle(fontSize: 50)),
+        ),
+        Container(height: 800, child: _buildEverythingTabView()),
+      ],
+    )));
   }
 
   Widget _buildEverythingTabView() {

@@ -39,10 +39,10 @@ class _UnsplashAPIState extends State<UnsplashAPI> {
         child: Column(
           children: [
             Container(
-              child: Text('GALLERY',
-                  style: TextStyle(
-                      backgroundColor: Color.fromARGB(255, 249, 223, 162),
-                      fontSize: 50)),
+              width: MediaQuery.of(context).size.width,
+              alignment: Alignment.center,
+              color: Color.fromARGB(255, 249, 223, 162),
+              child: Text('GALLERY', style: TextStyle(fontSize: 50)),
             ),
             Container(height: 800, child: staggeredGridView()),
           ],
