@@ -52,7 +52,7 @@ class _LocationState extends State<Location> {
   }
 
   Container buildMap() => Container(
-        height: 1000,
+        height: MediaQuery.of(context).size.height,
         child: GoogleMap(
           initialCameraPosition: CameraPosition(
             target: LatLng(51.509865, -0.118092),

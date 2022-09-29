@@ -100,7 +100,7 @@ class FlutterUnsplash extends StatelessWidget {
     return SizedBox(
       height: 1000,
       child: DefaultTabController(
-        length: 3,
+        length: 4,
         child: Scaffold(
           appBar: AppBar(
             bottom: PreferredSize(
@@ -110,15 +110,25 @@ class FlutterUnsplash extends StatelessWidget {
                 child: TabBar(
                   tabs: [
                     Container(
-                        height: 20,
-                        child:
-                            Tab(icon: Icon(Icons.photo_camera_back_outlined))),
-                    Container(
-                        height: 20,
+                        height: 72,
                         child: Tab(
-                          icon: Icon(Icons.map),
-                        )),
-                    Container(height: 20, child: Tab(icon: Icon(Icons.feed))),
+                            // icon: Icon(Icons.photo_camera_back_outlined),
+                            text: 'GALLERY')),
+                    Container(
+                        height: 72,
+                        child: Tab(
+                            // icon: Icon(Icons.map),
+                            text: 'MAP')),
+                    Container(
+                        height: 72,
+                        child: Tab(
+                            // icon: Icon(Icons.map),
+                            text: 'WEATHER')),
+                    Container(
+                        height: 72,
+                        child: Tab(
+                            // icon: Icon(Icons.feed),
+                            text: 'NEWS FEED')),
                   ],
                 ),
               ),
@@ -128,7 +138,8 @@ class FlutterUnsplash extends StatelessWidget {
           body: TabBarView(
             children: [
               const UnsplashAPI(),
-              mainContent(),
+              Location(),
+              OpenWeatherMapAPI(),
               MyNewsFeed(),
             ],
           ),
@@ -218,9 +229,7 @@ class FlutterUnsplash extends StatelessWidget {
   }
 }
 
-
 // Future<bool> checkIfSignedIn() async {
 //   AuthService authService = AuthService();
 //   return await authService.checkIsSignedIn();
 // }
-

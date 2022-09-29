@@ -27,7 +27,7 @@ class _OpenWeatherMapAPIState extends State<OpenWeatherMapAPI> {
 
   Container weatherAPI() {
     return Container(
-      width: double.infinity,
+      width: 500,
       decoration: const BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topCenter,
@@ -45,7 +45,6 @@ class _OpenWeatherMapAPIState extends State<OpenWeatherMapAPI> {
                 latitude: 51.509865,
                 longitude: -0.118092,
                 location: "London",
-                height: 180,
                 apiKey: "bdc31733796dbbeb750ad9bce5d73668",
                 alignment: MainAxisAlignment.center,
                 margin: EdgeInsets.all(5),
